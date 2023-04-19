@@ -1,29 +1,17 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {Category} from 'src/redux/types';
+
+import {DefaultCategories} from 'src/data/categories';
+
+import {Category} from '../types';
 
 interface CategoryState {
+  selectedCategory: Category;
   categories: Category[];
 }
 
 const initialState: CategoryState = {
-  categories: [
-    {
-      name: 'Cities',
-      items: ['SINGAPORE'],
-    },
-    {
-      name: 'Food',
-      items: ['LAKSA'],
-    },
-    {
-      name: 'Animals',
-      items: ['BUTTERFLY'],
-    },
-    {
-      name: 'Movies',
-      items: ['AVENGERS'],
-    },
-  ],
+  selectedCategory: DefaultCategories[0],
+  categories: DefaultCategories,
 };
 
 const categoriesSlice = createSlice({

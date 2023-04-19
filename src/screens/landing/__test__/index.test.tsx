@@ -3,23 +3,25 @@ import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
 import {render} from '@testing-library/react-native';
 
+import {DefaultCategories} from 'src/data/categories';
+
 import LandingScreen from '../';
 
 const mockStore = configureStore();
 const state = {
   category: {
-    categories: [],
+    categories: DefaultCategories,
   },
 };
 const store = mockStore(state);
 
 describe('Screen: Landing', () => {
   it('should render properly', () => {
-    const {toJSON} = render(
+    const snapshot = render(
       <Provider store={store}>
         <LandingScreen />
       </Provider>,
-    );
-    expect(toJSON).toMatchSnapshot();
+    ).toJSON();
+    expect(snapshot).toMatchSnapshot();
   });
 });
