@@ -5,8 +5,8 @@ import CategoryButton from '../';
 
 describe('Component: IconButton', () => {
   it('should render a CategoryButton', () => {
-    const {toJSON} = render(<CategoryButton title="Mock Title" />);
-    expect(toJSON).toMatchSnapshot();
+    const snapshot = render(<CategoryButton title="Mock Title" />).toJSON();
+    expect(snapshot).toMatchSnapshot();
   });
 
   it('can handle press events', () => {
