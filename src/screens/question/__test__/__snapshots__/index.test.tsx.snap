@@ -48,7 +48,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -84,18 +84,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-S"
+        testID="category-button-"
       >
-        <Text>
-          S
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -131,18 +129,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-I"
+        testID="category-button-"
       >
-        <Text>
-          I
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -178,18 +174,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-N"
+        testID="category-button-"
       >
-        <Text>
-          N
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -225,18 +219,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-G"
+        testID="category-button-"
       >
-        <Text>
-          G
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -272,18 +264,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-A"
+        testID="category-button-"
       >
-        <Text>
-          A
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -319,18 +309,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-P"
+        testID="category-button-"
       >
-        <Text>
-          P
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -366,18 +354,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-O"
+        testID="category-button-"
       >
-        <Text>
-          O
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -413,18 +399,16 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-R"
+        testID="category-button-"
       >
-        <Text>
-          R
-        </Text>
+        <Text />
       </View>
       <View
         accessibilityState={
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": true,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -460,11 +444,9 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-E"
+        testID="category-button-"
       >
-        <Text>
-          E
-        </Text>
+        <Text />
       </View>
     </View>
     <Text
@@ -494,101 +476,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-S"
-      >
-        <Text>
-          S
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": undefined,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-I"
-      >
-        <Text>
-          I
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": undefined,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -635,7 +523,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -671,10 +559,10 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-G"
+        testID="category-button-I"
       >
         <Text>
-          G
+          I
         </Text>
       </View>
       <View
@@ -682,54 +570,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-A"
-      >
-        <Text>
-          A
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": undefined,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -776,7 +617,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -812,10 +653,10 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-O"
+        testID="category-button-E"
       >
         <Text>
-          O
+          E
         </Text>
       </View>
       <View
@@ -823,7 +664,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -870,7 +711,7 @@ exports[`Screen: Landing should render properly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": undefined,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -906,10 +747,151 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-E"
+        testID="category-button-A"
       >
         <Text>
-          E
+          A
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-O"
+      >
+        <Text>
+          O
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-S"
+      >
+        <Text>
+          S
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-G"
+      >
+        <Text>
+          G
         </Text>
       </View>
     </View>
@@ -919,7 +901,7 @@ exports[`Screen: Landing should render properly 1`] = `
       {
         "busy": undefined,
         "checked": undefined,
-        "disabled": undefined,
+        "disabled": false,
         "expanded": undefined,
         "selected": undefined,
       }
@@ -954,10 +936,10 @@ exports[`Screen: Landing should render properly 1`] = `
         "opacity": 1,
       }
     }
-    testID="category-button-Start"
+    testID="category-button-Skip"
   >
     <Text>
-      Start
+      Skip
     </Text>
   </View>
 </RCTSafeAreaView>

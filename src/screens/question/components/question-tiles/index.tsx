@@ -2,23 +2,31 @@ import React from 'react';
 import {View} from 'react-native';
 
 import Tile from 'src/components/category-button';
+
+import {ChoiceData} from '../../hooks/useGameEngine';
 import styles from './styles';
 
 interface Props {
-  letters: string[];
-  onPress?: (index: number, letter: string) => void;
+  disabled: boolean;
+  data: ChoiceData[];
+  onPress?: (index: number, choice: ChoiceData) => void;
 }
 
 const QuestionTiles = (props: Props): JSX.Element => {
-  const {letters, onPress} = props;
+  const {data, disabled, onPress} = props;
   return (
     <View style={styles.tilesContainer}>
-      {letters.map((char, index) => {
-        const onPressTile = () => onPress?.(index, char);
+      {data.map((tileData, index) => {
+        const {letter, originIndex} = tileData;
+        const key = `${index}-${originIndex}-${letter}-`;
+        const onPressTile = () => {
+          onPress?.(index, tileData);
+        };
         return (
           <Tile
-            key={`${index}-${char}`}
-            title={char}
+            key={key}
+            title={letter}
+            disabled={disabled}
             style={styles.tile}
             onPress={onPressTile}
           />
