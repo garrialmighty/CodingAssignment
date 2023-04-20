@@ -1,12 +1,18 @@
 import React, {useMemo} from 'react';
 import {Button, SafeAreaView, Text, View} from 'react-native';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
+import {AppStackParamList} from 'src/app/container';
 import {useAppSelector} from 'src/hooks/useAppSelector';
 import CategoryButton from 'src/components/category-button';
 
 import styles from './styles';
 
-const LandingScreen = (): JSX.Element => {
+type Props = NativeStackScreenProps<AppStackParamList, 'Landing'>;
+
+const LandingScreen = (props: Props): JSX.Element => {
+  const {navigation} = props;
+
   // TODO: fetch other categories from backend once API is available
   const categories = useAppSelector(state => state.category.categories);
   const CategoryButtons = useMemo(() => {

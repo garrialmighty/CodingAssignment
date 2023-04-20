@@ -1,12 +1,15 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import {NavigationContainer} from '@react-navigation/native';
 
-import LandingScreen from 'src/screens/landing';
+import AppContainer from './container';
 
 import store from 'src/redux/store';
 
 export default (): JSX.Element => (
-  <Provider store={store}>
-    <LandingScreen />
-  </Provider>
+  <NavigationContainer>
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>
+  </NavigationContainer>
 );
