@@ -8,3 +8,9 @@ export type Category = {
   name: string;
   items: Question[];
 };
+
+export type Leader = {
+  name: string;
+  points: number;
+  position: number;
+};

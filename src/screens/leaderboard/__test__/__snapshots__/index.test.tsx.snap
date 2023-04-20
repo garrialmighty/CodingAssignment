@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen: Leaderboard should render properly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+      "justifyContent": "space-between",
+      "marginHorizontal": "5%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 30,
+      }
+    }
+  >
+    1. Current User 	 - 	 0
+  </Text>
+</RCTSafeAreaView>
+`;

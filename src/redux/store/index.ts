@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import categoriesReducer from '../reducer/category';
+import leaderboardSlice from '../reducer/leaderboard';
 
 const store = configureStore({
   reducer: {
     category: categoriesReducer,
+    leader: leaderboardSlice,
   },
 });
 

@@ -1,13 +1,15 @@
-import React, {useEffect} from 'react';
+import React, {useCallback} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 
+import useAppDispatch from 'src/hooks/useAppDispatch';
+import {addPoints} from 'src/redux/reducer/leaderboard';
 import CategoryButton from 'src/components/category-button';
 
+import SuccessMessage from './components/success-message';
 import QuestionTiles from './components/question-tiles';
 import useGameEngine from './hooks/useGameEngine';
 import useIndexer from './hooks/useIndexer';
 import styles from './styles';
-import SuccessMessage from './components/success-message';
 
 const QuestionScreen = (): JSX.Element => {
   const {
@@ -27,11 +29,11 @@ const QuestionScreen = (): JSX.Element => {
   } = useGameEngine(answer);
   const nextButtonTitle = hasCorrectlyAnswered ? 'Next' : 'Skip';
 
-  useEffect(() => {
-    if (hasCorrectlyAnswered) {
-      // TODO: save points earned
-    }
-  }, [hasCorrectlyAnswered]);
+  const dispatch = useAppDispatch();
+  const onPressNext = useCallback(() => {
+    getNextQuestion();
+    dispatch(addPoints(points));
+  }, [getNextQuestion, dispatch, points]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -48,7 +50,7 @@ const QuestionScreen = (): JSX.Element => {
       <CategoryButton
         title={nextButtonTitle}
         style={styles.nextButton}
-        onPress={getNextQuestion}
+        onPress={onPressNext}
       />
     </SafeAreaView>
   );
