@@ -3,6 +3,8 @@ import {render} from '@testing-library/react-native';
 
 import QuestionScreen from '../';
 
+jest.mock('src/hooks/useAppDispatch', () => jest.fn());
+
 jest.mock('../hooks/useIndexer', () => {
   const {DefaultCategories} = require('src/data/categories');
   return () => ({

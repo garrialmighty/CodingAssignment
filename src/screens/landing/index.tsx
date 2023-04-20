@@ -7,6 +7,7 @@ import CategoryButton from 'src/components/category-button';
 import styles from './styles';
 
 const LandingScreen = (): JSX.Element => {
+  // TODO: fetch other categories from backend once API is available
   const categories = useAppSelector(state => state.category.categories);
   const CategoryButtons = useMemo(() => {
     // convert to a FlatList once the design evolves
