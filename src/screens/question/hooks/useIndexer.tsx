@@ -19,6 +19,11 @@ interface QuestionIndexer {
   question: string;
 
   /**
+   * Points earned when correctly guessing the question
+   */
+  points: number;
+
+  /**
    * Answer to the question
    */
   answer: string;
@@ -41,8 +46,12 @@ const useIndexer = (): QuestionIndexer => {
   const category = useAppSelector(state => state.category.selectedCategory);
   const [answer, setAnswer] = useState<string>('');
   const [question, setQuestion] = useState<string>('');
+  const [points, setPoints] = useState<number>(0);
+
+  // Initializer
   useEffect(() => {
     const questionItem = category.items[questionIndex - 1];
+    setPoints(questionItem.points);
     setAnswer(questionItem.answer);
     setQuestion(questionItem.description);
   }, [category, questionIndex, setAnswer, setQuestion]);
@@ -60,6 +69,7 @@ const useIndexer = (): QuestionIndexer => {
 
   return {
     answer,
+    points,
     question,
     questionIndex,
     getNextQuestion,

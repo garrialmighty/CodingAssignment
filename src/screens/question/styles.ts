@@ -5,7 +5,7 @@ interface Styles {
   title: ViewStyle;
   contentContainer: ViewStyle;
   question: ViewStyle;
-  startButton: ViewStyle;
+  nextButton: ViewStyle;
 }
 
 const styles: Styles = StyleSheet.create<Styles>({
@@ -29,7 +29,7 @@ const styles: Styles = StyleSheet.create<Styles>({
     fontSize: 30,
     textAlign: 'center',
   },
-  startButton: {
+  nextButton: {
     borderColor: '#b88782',
     backgroundColor: '#f0cfcd',
   },
