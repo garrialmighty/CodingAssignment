@@ -1,23 +1,28 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
 
-import QuestionTiles from '../';
 import {DefaultCategories} from 'src/data/categories';
+import {ChoiceData} from 'src/screens/question/hooks/useGameEngine';
 
-const mockAnswer = [...DefaultCategories[0].items[0].answer];
+import QuestionTiles from '../';
+const mockAnswers: ChoiceData[] = [...DefaultCategories[0].items[0].answer].map(
+  (letter, originIndex) => ({letter, originIndex}),
+);
 
 describe('Component: QuestionTiles', () => {
   it('should render properly', () => {
-    const snapshot = render(<QuestionTiles letters={mockAnswer} />).toJSON();
+    const snapshot = render(
+      <QuestionTiles data={mockAnswers} disabled={false} />,
+    ).toJSON();
     expect(snapshot).toMatchSnapshot();
   });
 
   it('can handle press events', () => {
     const mockPress = jest.fn();
     const {getByTestId} = render(
-      <QuestionTiles letters={mockAnswer} onPress={mockPress} />,
+      <QuestionTiles data={mockAnswers} disabled={false} onPress={mockPress} />,
     );
-    fireEvent.press(getByTestId(`category-button-${mockAnswer[0]}`));
+    fireEvent.press(getByTestId(`category-button-${mockAnswers[0].letter}`));
     expect(mockPress).toHaveBeenCalledTimes(1);
   });
 });

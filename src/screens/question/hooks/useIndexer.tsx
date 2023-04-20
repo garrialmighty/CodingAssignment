@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 import {useAppSelector} from 'src/hooks/useAppSelector';
 
@@ -39,8 +39,13 @@ const useIndexer = (): QuestionIndexer => {
   const [questionIndex, setIndex] = useState<number>(1);
 
   const category = useAppSelector(state => state.category.selectedCategory);
-  const questionItem = category.items[questionIndex - 1];
-  const answer = questionItem.answer;
+  const [answer, setAnswer] = useState<string>('');
+  const [question, setQuestion] = useState<string>('');
+  useEffect(() => {
+    const questionItem = category.items[questionIndex - 1];
+    setAnswer(questionItem.answer);
+    setQuestion(questionItem.description);
+  }, [category, questionIndex, setAnswer, setQuestion]);
 
   const getNextQuestion = () => {
     setIndex(prevIndex => {
@@ -55,9 +60,9 @@ const useIndexer = (): QuestionIndexer => {
 
   return {
     answer,
+    question,
     questionIndex,
     getNextQuestion,
-    question: questionItem.description,
     totalQuestions: category.items.length,
   };
 };

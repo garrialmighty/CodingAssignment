@@ -4,25 +4,36 @@ import {SafeAreaView, Text, View} from 'react-native';
 import CategoryButton from 'src/components/category-button';
 
 import QuestionTiles from './components/question-tiles';
+import useGameEngine from './hooks/useGameEngine';
 import useIndexer from './hooks/useIndexer';
 import styles from './styles';
 
 const QuestionScreen = (): JSX.Element => {
   const {questionIndex, totalQuestions, question, answer} = useIndexer();
-
-  useEffect(() => {
-    }
-  }, []);
-
+  const {
+    currentAnswer,
+    choices,
+    hasCorrectlyAnswered,
+    pickChoice,
+    unpickChoice,
+  } = useGameEngine(answer);
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>{`${questionIndex}/${totalQuestions}`}</Text>
       <View style={styles.contentContainer}>
-        <QuestionTiles letters={[...answer]} />
+        <QuestionTiles
+          data={currentAnswer}
+          onPress={unpickChoice}
+          disabled={hasCorrectlyAnswered}
+        />
         <Text style={styles.question}>{question}</Text>
-        <QuestionTiles letters={[...answer]} />
+        <QuestionTiles
+          data={choices}
+          onPress={pickChoice}
+          disabled={hasCorrectlyAnswered}
+        />
       </View>
-      <CategoryButton style={styles.startButton} title="Start" />
+      <CategoryButton style={styles.startButton} title="Skip" />
     </SafeAreaView>
   );
 };
