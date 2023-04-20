@@ -11,16 +11,14 @@ const mockAnswers: ChoiceData[] = [...DefaultCategories[0].items[0].answer].map(
 
 describe('Component: QuestionTiles', () => {
   it('should render properly', () => {
-    const snapshot = render(
-      <QuestionTiles data={mockAnswers} disabled={false} />,
-    ).toJSON();
+    const snapshot = render(<QuestionTiles data={mockAnswers} />).toJSON();
     expect(snapshot).toMatchSnapshot();
   });
 
   it('can handle press events', () => {
     const mockPress = jest.fn();
     const {getByTestId} = render(
-      <QuestionTiles data={mockAnswers} disabled={false} onPress={mockPress} />,
+      <QuestionTiles data={mockAnswers} onPress={mockPress} />,
     );
     fireEvent.press(getByTestId(`category-button-${mockAnswers[0].letter}`));
     expect(mockPress).toHaveBeenCalledTimes(1);

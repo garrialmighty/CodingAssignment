@@ -32,10 +32,11 @@ describe('useIndexer', () => {
     expect(result.current.totalQuestions).toEqual(mockCategory.items.length);
   });
 
-  it('tracks the current question and answer', () => {
+  it('tracks the current question, answer and points', () => {
     const mockQuestion = mockCategory.items[0];
     const {result} = renderHook(() => useIndexer(), {wrapper});
     expect(result.current.question).toEqual(mockQuestion.description);
     expect(result.current.answer).toEqual(mockQuestion.answer);
+    expect(result.current.points).toEqual(mockQuestion.points);
   });
 });

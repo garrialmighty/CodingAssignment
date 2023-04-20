@@ -46,6 +46,10 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
   const [answer, setAnswer] = useState<ChoiceData[]>([]);
   const [choices, setChoices] = useState<ChoiceData[]>([]);
 
+  // Initializer:
+  //    - Create blank answers
+  //    - Converts `correctAnswer` string into `ChoiceData` array
+  //    - Reset `hasCorrectlyAnswered` and `answerIndex`
   useEffect(() => {
     type ChoiceDataMapper = (letter: string, index: number) => ChoiceData;
     const mapper: ChoiceDataMapper = (letter, index) => ({
@@ -60,6 +64,9 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
 
     const shuffledAnswer = shuffle([...correctAnswer]).map(mapper);
     setChoices(shuffledAnswer);
+
+    setHasCorrectlyAnswered(false);
+    setIndex(0);
   }, [correctAnswer, setAnswer, setChoices]);
 
   const pickChoice = useCallback(
@@ -116,7 +123,7 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
 
   return {
     currentAnswer: answer,
-    choices: choices,
+    choices,
     hasCorrectlyAnswered,
     pickChoice,
     unpickChoice,

@@ -7,13 +7,12 @@ import {ChoiceData} from '../../hooks/useGameEngine';
 import styles from './styles';
 
 interface Props {
-  disabled: boolean;
   data: ChoiceData[];
   onPress?: (index: number, choice: ChoiceData) => void;
 }
 
 const QuestionTiles = (props: Props): JSX.Element => {
-  const {data, disabled, onPress} = props;
+  const {data, onPress} = props;
   return (
     <View style={styles.tilesContainer}>
       {data.map((tileData, index) => {
@@ -26,9 +25,9 @@ const QuestionTiles = (props: Props): JSX.Element => {
           <Tile
             key={key}
             title={letter}
-            disabled={disabled}
             style={styles.tile}
             onPress={onPressTile}
+            disabled={letter === ''}
           />
         );
       })}
