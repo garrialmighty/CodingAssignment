@@ -1,6 +1,8 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
+import {AppStackParamList} from 'src/app/container';
 import useAppDispatch from 'src/hooks/useAppDispatch';
 import {addPoints} from 'src/redux/reducer/leaderboard';
 import CategoryButton from 'src/components/category-button';
@@ -11,7 +13,10 @@ import useGameEngine from './hooks/useGameEngine';
 import useIndexer from './hooks/useIndexer';
 import styles from './styles';
 
-const QuestionScreen = (): JSX.Element => {
+type Props = NativeStackScreenProps<AppStackParamList, 'Question'>;
+
+const QuestionScreen = (props: Props): JSX.Element => {
+  const {goBack, setOptions} = props.navigation;
   const {
     totalQuestions,
     questionIndex,
@@ -27,17 +32,37 @@ const QuestionScreen = (): JSX.Element => {
     pickChoice,
     unpickChoice,
   } = useGameEngine(answer);
-  const nextButtonTitle = hasCorrectlyAnswered ? 'Next' : 'Skip';
+
+  // update header title
+  useEffect(
+    () => setOptions({title: `${questionIndex}/${totalQuestions}`}),
+    [setOptions, questionIndex, totalQuestions],
+  );
 
   const dispatch = useAppDispatch();
   const onPressNext = useCallback(() => {
-    getNextQuestion();
-    dispatch(addPoints(points));
-  }, [getNextQuestion, dispatch, points]);
+    if (hasCorrectlyAnswered) {
+      dispatch(addPoints(points));
+    }
 
+    if (questionIndex === totalQuestions) {
+      goBack();
+    } else {
+      getNextQuestion();
+    }
+  }, [
+    hasCorrectlyAnswered,
+    dispatch,
+    points,
+    questionIndex,
+    totalQuestions,
+    goBack,
+    getNextQuestion,
+  ]);
+
+  const nextButtonTitle = hasCorrectlyAnswered ? 'Next' : 'Skip';
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>{`${questionIndex}/${totalQuestions}`}</Text>
       {hasCorrectlyAnswered ? (
         <SuccessMessage points={points} />
       ) : (

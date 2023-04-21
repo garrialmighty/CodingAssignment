@@ -17,7 +17,15 @@ const AppStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Landing" component={LandingScreen} />
-      <Stack.Screen name="Question" component={QuestionScreen} />
+      <Stack.Screen
+        name="Question"
+        component={QuestionScreen}
+        options={{
+          headerTitleStyle: {
+            fontSize: 30,
+          },
+        }}
+      />
       <Stack.Screen name="Leaderboards" component={LeaderboardScreen} />
     </Stack.Navigator>
   );
