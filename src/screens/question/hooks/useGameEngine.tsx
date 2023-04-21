@@ -38,6 +38,14 @@ interface QuestionGameEngine {
   unpickChoice: (index: number, choice: ChoiceData) => void;
 }
 
+/**
+ * This hook is responsible for the Question screens game logic. It keeps track of the player's selected
+ * tiles forming an answer as well as the remaining letter choices. The hook is also responsible for
+ * returning selected tiles back to their original position should the user decide to deselect the letter.
+ *
+ * @returns A `QuestionGameEngine` object
+ *
+ */
 const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
   const [answerIndex, setIndex] = useState<number>(0);
   const [hasCorrectlyAnswered, setHasCorrectlyAnswered] =
