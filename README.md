@@ -81,6 +81,14 @@ Aside from the cloud signing and Play Store signing options, there are other too
 
 The app is word game puzzle where the user/player tries to guess the word being described given a set of letters.
 
+### Assumptions
+
+The developer assumed the following during development:
+
+- The `Landing` screen will fetch more categories via an API and therefore the design will evolve.
+- The user can only pick one category at a time.
+- The `Leadboard` screen will fetch more leaderboards data via an API and the design will be available by that time. In the meantime only the current user will appear.
+
 ### Codebase
 
 The app is developed using, as of this writing, the latest version of React Native (`0.71.6`) with the default Typescript template.
@@ -95,12 +103,21 @@ The `Landing` screen is what the user will first see when opening the app. This 
 
 #### Question
 
-The `Question` screen is where the actual game happens. This module has three important parts: the [`index`](src/screens/question/index.tsx), the [`useIndexer`](src/screens/question/hooks/useIndexer.tsx) hook and the [`useGameEngine`](src/screens/question/hooks/useGameEngine.tsx) hook . The `useIndexer` hook is responsible for fetching the selected category the user picked from the `Landing` screen as well as going through the list of questions and answers included in the category. These data are returned to the `index` for rendering and other game related logic. The `useGameEngine` hook is responsible
+The `Question` screen is where the actual game happens. This module has three important parts: the [`index`](src/screens/question/index.tsx), the [`useIndexer`](src/screens/question/hooks/useIndexer.tsx) hook and the [`useGameEngine`](src/screens/question/hooks/useGameEngine.tsx) hook . The `useIndexer` hook is responsible for fetching the selected category the user picked from the `Landing` screen as well as going through the list of questions and answers included in the category. These data are returned to the `index` for rendering and other game related logic. The `useGameEngine` hook is where the actual game happens. It is responsible for shuffling the answer's letters and keeps track of the selected and unselected letters. The `index` is what contains both hooks together to make the screen functional. The main reasoning in creating these parts (as well as other unmentioned parts) is to separate the game logic and allow easy testing and maintainability.
 
-The `index` is what contains both hooks together to make the screen functional.
+#### Leaderboard
 
-#### Limitations
+The `Leaderboard` screen is where scores from other players are displayed as well as the current user's position. There is a share button at the bottom of the screen that shares the user's score to their preferred social media platform.
 
 #### Code Coverage
 
+The codebase has 92.9% code coverage. This can be verified by running `yarn test`.
+
 #### Improvements
+
+Here are some areas that can be improved:
+
+- [ ] Hide navigation header in `Landing` screen
+- [ ] Show selected category indicator
+- [ ] Improve UX when guessing wrong in `Question` screen
+- [ ] Ramp up code coverage to 100%
