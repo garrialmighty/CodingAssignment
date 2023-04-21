@@ -10,19 +10,6 @@ exports[`Screen: Landing should render properly 1`] = `
     }
   }
 >
-  <Text
-    style={
-      {
-        "backgroundColor": "#dce7f9",
-        "borderColor": "#a2b4cc",
-        "borderWidth": 1,
-        "fontSize": 50,
-        "textAlign": "center",
-      }
-    }
-  >
-    1/1
-  </Text>
   <View
     style={
       {
@@ -559,151 +546,10 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-N"
+        testID="category-button-S"
       >
         <Text>
-          N
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": false,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-I"
-      >
-        <Text>
-          I
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": false,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-G"
-      >
-        <Text>
-          G
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": false,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-R"
-      >
-        <Text>
-          R
+          S
         </Text>
       </View>
       <View
@@ -794,10 +640,10 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-E"
+        testID="category-button-R"
       >
         <Text>
-          E
+          R
         </Text>
       </View>
       <View
@@ -888,10 +734,151 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-S"
+        testID="category-button-N"
       >
         <Text>
-          S
+          N
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-G"
+      >
+        <Text>
+          G
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-I"
+      >
+        <Text>
+          I
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-E"
+      >
+        <Text>
+          E
         </Text>
       </View>
     </View>
