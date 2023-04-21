@@ -21,10 +21,14 @@ const categoriesSlice = createSlice({
     saveCategories: (state, action: PayloadAction<Category[]>) => {
       state.categories = action.payload;
     },
+    selectCategory: (state, action: PayloadAction<Category>) => {
+      // TODO: Allow multiple category selection, and eventually category deselection
+      state.selectedCategory = action.payload;
+    },
   },
 });
 
 // actions
-export const {saveCategories} = categoriesSlice.actions;
+export const {saveCategories, selectCategory} = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;
