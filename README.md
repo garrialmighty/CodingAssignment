@@ -60,14 +60,14 @@ Both Apple App Store and Google Play Store require app artifacts (ipa for iOS an
 
 For Android this can be done locally using [`keytool`](https://reactnative.dev/docs/signed-apk-android#generating-an-upload-key) or [Android Studio](https://developer.android.com/studio/publish/app-signing#generate-key).
 
-Unlike Android, Apple requires developers to be, or is part of a team, that is enrolled in Apple's Developer Program. That being said, once the developer's account has the correct role, creating a distribution certificate can be done either in [Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09) or through the [developer portal](https://developer.apple.com/help/account/create-certificates/create-enterprise-distribution-certificates). Apart from the signing certificate, a provisioning profile is also required for signing ipa's. This can only be done in the [developer portal](https://developer.apple.com/help/account/manage-profiles/create-an-app-store-provisioning-profile) and once created can be synced in Xcode. This can also be managed automatically via cloud signing.
+Unlike Android, Apple requires developers to be, or is part of a team that is, enrolled in Apple's Developer Program. That being said, once the developer's account has the correct role, creating a distribution certificate can be done either in [Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09) or through the [developer portal](https://developer.apple.com/help/account/create-certificates/create-enterprise-distribution-certificates). Apart from the signing certificate, a provisioning profile is also required for signing ipa's. This can only be done in the [developer portal](https://developer.apple.com/help/account/manage-profiles/create-an-app-store-provisioning-profile) and once created can be synced in Xcode. This can also be managed automatically via cloud signing.
 
 #### Building
 
 For Android, simply go to the Android folder (`cd android`) and run `./gradlew bundleRelease`.
 This will create an aab (Android App Bundle) inside `android/app/build/outputs/bundle/release` to be uploaded to Google Play Console.
 
-For iOS, building is done via Xcode. Once the ios workspace is open go to `Product` -> `Archive`. Once archiving is complete, a window will pop-up showing the archive with an option to `Distribute App`. Clicking on the option will go through the workflow to upload to App Store Connect.
+For iOS, building is done via Xcode. Open the iOS workspace and go to `Product` -> `Archive`. Once archiving is complete, a window will pop-up showing the archive with an option to `Distribute App`. Clicking on the option will go through the workflow to upload to App Store Connect.
 
 > **_IMPORTANT:_** There are configuration steps required to make sure both the iOS and Android projects are able to detect and use the generated signing certificates. These steps are outside the scope of this document.
 
@@ -95,7 +95,7 @@ The app is developed using, as of this writing, the latest version of React Nati
 
 #### Overview
 
-The entry point for code is in `src/app`. This is where all the screens and providers are contained into one application component. Speaking of providers, the app uses `redux` for it's app-wide state management. Moreover, `redux` is integrated into the codebase using `@reduxjs/toolkit` as [suggested](https://redux.js.org/introduction/why-rtk-is-redux-today) by `redux` themselves. This significantly simplifies implementation and lessens the boilerplate code needed from simply integrating `redux`. The entire app is be divided into three screens: `Landing`, `Question`, and `Leaderboard`.
+The entry point for code is in `src/app`. This is where all the screens and providers are contained into one application component. Speaking of providers, the app uses `redux` for it's app-wide state management. Moreover, `redux` is integrated into the codebase using `@reduxjs/toolkit` as [suggested](https://redux.js.org/introduction/why-rtk-is-redux-today) by `redux` themselves. This significantly simplifies implementation and lessens the boilerplate code needed from simply integrating `redux`. The entire app is divided into three screens: [`Landing`](src/screens/landing/index.tsx), [`Question`](src/screens/question/index.tsx), and [`Leaderboard`](src/screens/leaderboard/index.tsx).
 
 #### Landing
 
@@ -103,7 +103,7 @@ The `Landing` screen is what the user will first see when opening the app. This 
 
 #### Question
 
-The `Question` screen is where the actual game happens. This module has three important parts: the [`index`](src/screens/question/index.tsx), the [`useIndexer`](src/screens/question/hooks/useIndexer.tsx) hook and the [`useGameEngine`](src/screens/question/hooks/useGameEngine.tsx) hook . The `useIndexer` hook is responsible for fetching the selected category the user picked from the `Landing` screen as well as going through the list of questions and answers included in the category. These data are returned to the `index` for rendering and other game related logic. The `useGameEngine` hook is where the actual game happens. It is responsible for shuffling the answer's letters and keeps track of the selected and unselected letters. The `index` is what contains both hooks together to make the screen functional. The main reasoning in creating these parts (as well as other unmentioned parts) is to separate the game logic and allow easy testing and maintainability.
+The `Question` screen is where the actual game happens. This module has three important parts: the [`index`](src/screens/question/index.tsx), the [`useIndexer`](src/screens/question/hooks/useIndexer.tsx) hook and the [`useGameEngine`](src/screens/question/hooks/useGameEngine.tsx) hook . The `useIndexer` hook is responsible for fetching the selected category the user picked from the `Landing` screen as well as going through the list of questions and answers included in the category. These data are returned to the `index` for rendering and other game related logic. The `useGameEngine` hook is where the game logic resides. It is responsible for shuffling the answer's letters and keeps track of the selected and unselected letters. The `index` is what contains both hooks together to make the screen functional. The main reasoning in creating these parts (as well as other unmentioned parts) is to separate the game logic and allow easy testing and maintainability.
 
 #### Leaderboard
 
@@ -117,7 +117,7 @@ The codebase has 92.9% code coverage. This can be verified by running `yarn test
 
 Here are some areas that can be improved:
 
-- [ ] Hide navigation header in `Landing` screen
+- [x] Hide navigation header in `Landing` screen
 - [ ] Show selected category indicator
 - [ ] Improve UX when guessing wrong in `Question` screen
 - [ ] Ramp up code coverage to 100%
