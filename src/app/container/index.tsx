@@ -16,7 +16,11 @@ const Stack = createNativeStackNavigator<AppStackParamList>();
 const AppStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Landing" component={LandingScreen} />
+      <Stack.Screen
+        name="Landing"
+        component={LandingScreen}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="Question"
         component={QuestionScreen}
@@ -24,6 +28,7 @@ const AppStack = () => {
           headerTitleStyle: {
             fontSize: 30,
           },
+          headerShown: false,
         }}
       />
       <Stack.Screen name="Leaderboards" component={LeaderboardScreen} />
