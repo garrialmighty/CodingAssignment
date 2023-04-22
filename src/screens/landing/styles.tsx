@@ -4,7 +4,6 @@ interface Styles {
   container: ViewStyle;
   title: ViewStyle;
   buttonContainer: ViewStyle;
-  categoryButton: ViewStyle;
   startButton: ViewStyle;
 }
 
@@ -24,10 +23,6 @@ const styles: Styles = StyleSheet.create<Styles>({
   buttonContainer: {
     flex: 0.8,
     justifyContent: 'space-around',
-  },
-  categoryButton: {
-    borderWidth: 1,
-    borderColor: 'black',
   },
   startButton: {
     borderColor: '#b88782',
