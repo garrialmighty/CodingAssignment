@@ -29,6 +29,7 @@ const QuestionScreen = (props: Props): JSX.Element => {
     choices,
     currentAnswer,
     hasCorrectlyAnswered,
+    hasUsedAllLetters,
     pickChoice,
     unpickChoice,
   } = useGameEngine(answer);
@@ -61,13 +62,18 @@ const QuestionScreen = (props: Props): JSX.Element => {
   ]);
 
   const nextButtonTitle = hasCorrectlyAnswered ? 'Next' : 'Skip';
+  const isIncorrectAnswer = hasUsedAllLetters && !hasCorrectlyAnswered;
   return (
     <SafeAreaView style={styles.container}>
       {hasCorrectlyAnswered ? (
         <SuccessMessage points={points} />
       ) : (
         <View style={styles.contentContainer}>
-          <QuestionTiles data={currentAnswer} onPress={unpickChoice} />
+          <QuestionTiles
+            data={currentAnswer}
+            onPress={unpickChoice}
+            incorrect={isIncorrectAnswer}
+          />
           <Text style={styles.question}>{question}</Text>
           <QuestionTiles data={choices} onPress={pickChoice} />
         </View>

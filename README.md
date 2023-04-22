@@ -119,6 +119,6 @@ Here are some areas that can be improved:
 
 - [x] Hide navigation header in `Landing` screen
 - [x] Show selected category indicator
-- [ ] Improve UX when guessing wrong in `Question` screen
+- [x] Improve UX when guessing wrong in `Question` screen
 - [ ] Ramp up code coverage to 100%
-- [ ] Mock `shuffle.ts` in tests to prevent constantly updating snapshots
+- [x] Mock `shuffle.ts` in tests to prevent constantly updating snapshots

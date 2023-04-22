@@ -499,53 +499,6 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-A"
-      >
-        <Text>
-          A
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": false,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
         testID="category-button-S"
       >
         <Text>
@@ -593,104 +546,10 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-O"
+        testID="category-button-I"
       >
         <Text>
-          O
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": false,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-R"
-      >
-        <Text>
-          R
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": false,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderColor": "black",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "height": 45,
-            "justifyContent": "center",
-            "marginRight": 20,
-            "opacity": 1,
-            "width": 45,
-          }
-        }
-        testID="category-button-P"
-      >
-        <Text>
-          P
+          I
         </Text>
       </View>
       <View
@@ -828,10 +687,151 @@ exports[`Screen: Landing should render properly 1`] = `
             "width": 45,
           }
         }
-        testID="category-button-I"
+        testID="category-button-A"
       >
         <Text>
-          I
+          A
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-P"
+      >
+        <Text>
+          P
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-O"
+      >
+        <Text>
+          O
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 45,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+            "width": 45,
+          }
+        }
+        testID="category-button-R"
+      >
+        <Text>
+          R
         </Text>
       </View>
       <View

@@ -24,6 +24,11 @@ interface QuestionGameEngine {
   hasCorrectlyAnswered: boolean;
 
   /**
+   * Flag to indicate if player has selected all available letters
+   */
+  hasUsedAllLetters: boolean;
+
+  /**
    * Select a letter from the choices
    * @param index - Index for the letter selected
    * @param choice - `ChoiceData` object selected
@@ -50,6 +55,7 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
   const [answerIndex, setIndex] = useState<number>(0);
   const [hasCorrectlyAnswered, setHasCorrectlyAnswered] =
     useState<boolean>(false);
+  const [hasUsedAllLetters, setHasUsedAllLetters] = useState<boolean>(false);
 
   const [answer, setAnswer] = useState<ChoiceData[]>([]);
   const [choices, setChoices] = useState<ChoiceData[]>([]);
@@ -75,7 +81,15 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
 
     setHasCorrectlyAnswered(false);
     setIndex(0);
-  }, [correctAnswer, setAnswer, setChoices]);
+    setHasUsedAllLetters(false);
+  }, [
+    correctAnswer,
+    setAnswer,
+    setChoices,
+    setHasCorrectlyAnswered,
+    setIndex,
+    setHasUsedAllLetters,
+  ]);
 
   const pickChoice = useCallback(
     (index: number, choice: ChoiceData) => {
@@ -86,10 +100,11 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
       const nextIndex = currentAnswer.findIndex(ans => ans.letter === '');
       setIndex(nextIndex);
 
-      const answerString = currentAnswer.reduce(
-        (currentString, currentChoice) => currentString + currentChoice.letter,
-        '',
-      );
+      const arrToStrReducer = (
+        currentString: string,
+        currentChoice: ChoiceData,
+      ) => currentString + currentChoice.letter;
+      const answerString = currentAnswer.reduce(arrToStrReducer, '');
 
       if (answerString === correctAnswer) {
         setHasCorrectlyAnswered(true);
@@ -98,6 +113,10 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
       const currentChoices = [...choices];
       currentChoices[index].letter = '';
       setChoices(currentChoices);
+      const choiceString = currentChoices.reduce(arrToStrReducer, '');
+      if (choiceString === '') {
+        setHasUsedAllLetters(true);
+      }
     },
     [
       answer,
@@ -108,6 +127,7 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
       choices,
       answerIndex,
       correctAnswer,
+      setHasUsedAllLetters,
     ],
   );
 
@@ -125,14 +145,17 @@ const useGameEngine = (correctAnswer: string): QuestionGameEngine => {
 
       const nextIndex = currentAnswer.findIndex(ans => ans.letter === '');
       setIndex(nextIndex);
+
+      setHasUsedAllLetters(false);
     },
-    [choices, setChoices, answer, setAnswer, setIndex],
+    [choices, setChoices, answer, setAnswer, setIndex, setHasUsedAllLetters],
   );
 
   return {
     currentAnswer: answer,
     choices,
     hasCorrectlyAnswered,
+    hasUsedAllLetters,
     pickChoice,
     unpickChoice,
   };

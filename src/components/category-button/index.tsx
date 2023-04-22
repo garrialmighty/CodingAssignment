@@ -12,7 +12,7 @@ interface Props {
 }
 
 const CategoryButton = (props: Props): JSX.Element => {
-  const {title, style, selected, disabled = false, onPress} = props;
+  const {title, style, selected = false, disabled = false, onPress} = props;
   const isDisabled = title === '' || disabled;
   const buttonStyle = [
     styles.container,

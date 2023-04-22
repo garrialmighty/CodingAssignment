@@ -15,6 +15,13 @@ describe('Component: QuestionTiles', () => {
     expect(snapshot).toMatchSnapshot();
   });
 
+  it('can indicate an incorrect guess', () => {
+    const snapshot = render(
+      <QuestionTiles data={mockAnswers} incorrect />,
+    ).toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
+
   it('can handle press events', () => {
     const mockPress = jest.fn();
     const {getByTestId} = render(

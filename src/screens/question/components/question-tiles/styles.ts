@@ -3,6 +3,7 @@ import {StyleSheet, ViewStyle} from 'react-native';
 interface Styles {
   tile: ViewStyle;
   tilesContainer: ViewStyle;
+  incorrect: ViewStyle;
 }
 
 const styles: Styles = StyleSheet.create<Styles>({
@@ -19,6 +20,7 @@ const styles: Styles = StyleSheet.create<Styles>({
     alignContent: 'center',
     justifyContent: 'center',
   },
+  incorrect: {borderColor: 'red'},
 });
 
 export default styles;
