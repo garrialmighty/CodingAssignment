@@ -2,7 +2,7 @@ import {renderHook, act} from '@testing-library/react-hooks';
 
 import {DefaultCategories} from 'src/data/categories';
 
-import useGameEngine from '../useGameEngine';
+import useGameEngine, {ChoiceData} from '../useGameEngine';
 
 const mockAnswer = DefaultCategories[0].items[0].answer;
 
@@ -36,5 +36,27 @@ describe('useGameEngine', () => {
     expect(result.current.choices[mockChoiceIndex].letter).toEqual(
       mockChoice.letter,
     );
+  });
+
+  it('can toggle hasUsedAllLetters when user selects all choices', () => {
+    const {result} = renderHook(() => useGameEngine(mockAnswer));
+    expect(result.current.hasUsedAllLetters).toEqual(false);
+
+    // loop through all choices
+    for (let index = 0; index < result.current.choices.length; index++) {
+      const mockChoice: ChoiceData = {letter: 'X', originIndex: index};
+      act(() => result.current.pickChoice(index, mockChoice));
+    }
+
+    expect(result.current.hasUsedAllLetters).toEqual(true);
+  });
+
+  it('can toggle hasCorrectlyAnswered when user correctly guesses the answer', () => {
+    const {result} = renderHook(() => useGameEngine('A'));
+    expect(result.current.hasCorrectlyAnswered).toEqual(false);
+
+    const mockChoice: ChoiceData = {letter: 'A', originIndex: 0};
+    act(() => result.current.pickChoice(0, mockChoice));
+    expect(result.current.hasCorrectlyAnswered).toEqual(true);
   });
 });
