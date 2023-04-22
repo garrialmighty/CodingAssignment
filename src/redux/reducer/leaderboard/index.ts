@@ -27,6 +27,6 @@ const leaderboardSlice = createSlice({
 });
 
 // actions
-export const {addPoints} = leaderboardSlice.actions;
+export const {addPoints, saveLeaders} = leaderboardSlice.actions;
 
 export default leaderboardSlice.reducer;

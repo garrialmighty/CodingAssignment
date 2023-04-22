@@ -5,7 +5,7 @@ import styles from './styles';
 
 interface Props {
   title: string;
-  style?: ViewStyle;
+  style?: ViewStyle | ViewStyle[];
   selected?: boolean;
   disabled?: boolean;
   onPress?: () => void;
