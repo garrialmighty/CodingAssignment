@@ -5,6 +5,10 @@ import QuestionScreen from '../';
 
 jest.mock('src/hooks/useAppDispatch', () => jest.fn());
 
+jest.mock('src/util/shuffle', () => ({
+  shuffle: jest.fn().mockImplementation(array => array),
+}));
+
 const mockBack = jest.fn();
 const props = {
   navigation: {

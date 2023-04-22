@@ -8,11 +8,13 @@ import styles from './styles';
 
 interface Props {
   data: ChoiceData[];
+  incorrect?: boolean;
   onPress?: (index: number, choice: ChoiceData) => void;
 }
 
 const QuestionTiles = (props: Props): JSX.Element => {
-  const {data, onPress} = props;
+  const {data, onPress, incorrect = false} = props;
+  const tileStyle = [styles.tile, incorrect ? styles.incorrect : {}];
   return (
     <View style={styles.tilesContainer}>
       {data.map((tileData, index) => {
@@ -25,7 +27,7 @@ const QuestionTiles = (props: Props): JSX.Element => {
           <Tile
             key={key}
             title={letter}
-            style={styles.tile}
+            style={tileStyle}
             onPress={onPressTile}
             disabled={letter === ''}
           />
