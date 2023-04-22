@@ -24,7 +24,14 @@ describe('useIndexer', () => {
     const {result} = renderHook(() => useIndexer(), {wrapper});
     expect(result.current.questionIndex).toEqual(1);
     act(() => result.current.getNextQuestion());
-    expect(result.current.questionIndex).toEqual(2);
+    expect(result.current.questionIndex).toEqual(mockCategory.items.length);
+
+    // call getNextQuestion more than the number of questions
+    for (let index = 0; index < mockCategory.items.length + 2; index++) {
+      act(() => result.current.getNextQuestion());
+    }
+
+    expect(result.current.questionIndex).toEqual(mockCategory.items.length);
   });
 
   it('returns the total number of question for a selected category', () => {
