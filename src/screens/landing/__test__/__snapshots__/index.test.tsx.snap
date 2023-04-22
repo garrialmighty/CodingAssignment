@@ -62,7 +62,7 @@ exports[`Screen: Landing should render properly 1`] = `
       style={
         {
           "alignItems": "center",
-          "borderColor": "black",
+          "borderColor": "green",
           "borderRadius": 5,
           "borderWidth": 1,
           "height": 45,

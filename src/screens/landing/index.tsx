@@ -17,21 +17,25 @@ const LandingScreen = (props: Props): JSX.Element => {
   // TODO: fetch other categories from backend once API is available
   const dispatch = useAppDispatch();
   const categories = useAppSelector(state => state.category.categories);
+  const selectedCategory = useAppSelector(
+    state => state.category.selectedCategory,
+  );
   const CategoryButtons = useMemo(() => {
     // convert to a FlatList when/if the design evolves
     return categories.map(category => {
       const {name} = category;
       const onPressCategory = () => dispatch(selectCategory(category));
+      const isSelected = selectedCategory.name === name;
       return (
         <CategoryButton
           key={name}
           title={name}
+          selected={isSelected}
           onPress={onPressCategory}
-          style={styles.categoryButton}
         />
       );
     });
-  }, [dispatch, categories]);
+  }, [dispatch, categories, selectedCategory]);
 
   const navigateToQuestions = () => navigate('Question');
   const navigateToLeaderboards = () => navigate('Leaderboards');

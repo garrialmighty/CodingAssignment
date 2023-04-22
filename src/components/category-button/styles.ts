@@ -2,6 +2,8 @@ import {StyleSheet, ViewStyle} from 'react-native';
 
 interface Styles {
   container: ViewStyle;
+  default: ViewStyle;
+  selected: ViewStyle;
 }
 
 const styles: Styles = StyleSheet.create<Styles>({
@@ -9,10 +11,12 @@ const styles: Styles = StyleSheet.create<Styles>({
     height: 45,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: 'black',
+
     alignItems: 'center',
     justifyContent: 'center',
   },
+  default: {borderColor: 'black'},
+  selected: {borderColor: 'green'},
 });
 
 export default styles;

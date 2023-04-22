@@ -18,6 +18,7 @@ const mockStore = configureStore();
 const state = {
   category: {
     categories: DefaultCategories,
+    selectedCategory: DefaultCategories[0],
   },
 };
 const store = mockStore(state);

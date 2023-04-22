@@ -3,9 +3,16 @@ import {render, fireEvent} from '@testing-library/react-native';
 
 import CategoryButton from '../';
 
-describe('Component: IconButton', () => {
-  it('should render a CategoryButton', () => {
+describe('Component: CategoryButton', () => {
+  it('should render correctly', () => {
     const snapshot = render(<CategoryButton title="Mock Title" />).toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
+
+  it('is selectable', () => {
+    const snapshot = render(
+      <CategoryButton selected title="Mock Title" />,
+    ).toJSON();
     expect(snapshot).toMatchSnapshot();
   });
 

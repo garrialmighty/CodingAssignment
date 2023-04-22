@@ -118,6 +118,7 @@ The codebase has 92.9% code coverage. This can be verified by running `yarn test
 Here are some areas that can be improved:
 
 - [x] Hide navigation header in `Landing` screen
-- [ ] Show selected category indicator
+- [x] Show selected category indicator
 - [ ] Improve UX when guessing wrong in `Question` screen
 - [ ] Ramp up code coverage to 100%
+- [ ] Mock `shuffle.ts` in tests to prevent constantly updating snapshots
