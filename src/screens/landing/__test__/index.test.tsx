@@ -4,6 +4,7 @@ import configureStore from 'redux-mock-store';
 import {fireEvent, render} from '@testing-library/react-native';
 
 import {DefaultCategories} from 'src/data/categories';
+import * as CategoryActions from 'src/redux/reducer/category';
 
 import LandingScreen from '../';
 
@@ -55,5 +56,16 @@ describe('Screen: Landing', () => {
     );
     fireEvent.press(getByText('Leaderboards'));
     expect(mockNavigate).toHaveBeenCalledWith('Leaderboards');
+  });
+
+  it('can select a category', () => {
+    const selectCategoryMock = jest.spyOn(CategoryActions, 'selectCategory');
+    const {getByTestId} = render(
+      <Provider store={store}>
+        <LandingScreen {...props} />
+      </Provider>,
+    );
+    fireEvent.press(getByTestId('category-button-Movies'));
+    expect(selectCategoryMock).toHaveBeenCalled();
   });
 });
