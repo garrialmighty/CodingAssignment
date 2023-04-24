@@ -1,4 +1,4 @@
-# Singtel Modile Coding Assignment
+# Coding Assignment
 
 ## Prerequisite
 
